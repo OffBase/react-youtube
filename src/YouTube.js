@@ -297,7 +297,13 @@ class YouTube extends React.Component {
   render() {
     return (
       <span>
-        <div id={this.props.id} className={this.props.className} ref={this.refContainer} />
+        <iframe
+          id={this.props.id}
+          className={this.props.className}
+          ref={this.refContainer}
+          src={`https://www.youtube.com/embed/${this.props.videoId}?enablejsapi=1&origin=${this.props.origin}`}
+          frameborder="0"
+        />
       </span>
     );
   }
